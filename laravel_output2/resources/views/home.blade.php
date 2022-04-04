@@ -56,7 +56,9 @@
                     </div>
                 </div>
 
-                  <button type="submit" class="btn btn-primary col-md-5">検索</button>
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-primary col-md-5">検索</button>
+                  </div>
 
                 </form>
         </div>
