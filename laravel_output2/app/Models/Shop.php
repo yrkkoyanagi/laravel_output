@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Shop extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['shop_name','shop_pref','shop_city','nearest_station','use','food','budget_min','budget_max']
 }
