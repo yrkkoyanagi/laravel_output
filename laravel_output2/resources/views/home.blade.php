@@ -19,7 +19,7 @@
                 <div class="form-group">
                     <label>予算で検索</label>
                     <input type="text" class="form-control col-md-5" placeholder="検索したい金額を入力してください" name="budget">
-                    <select class="form-control col-md5" name="budget">
+                    <select class="form-control col-md5" name="equality">
                         <option selected value="0">選択...</option>
                         <option value="1">以上</option>
                         <option value="2">以下</option>
@@ -61,6 +61,10 @@
                   </div>
 
                 </form>
+
+                @if(!empty($message))
+                <div class="alert alert-primary" role="alert">{{$message}}</div>
+                @endif
         </div>
     </div>
 </div>
