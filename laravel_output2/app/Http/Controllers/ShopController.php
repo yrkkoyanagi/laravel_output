@@ -26,13 +26,14 @@ class ShopController extends Controller
 
         DB::enableQueryLog();
 
-        $shops = $query->orderBy('shop_id','asc')->paginate(15);
+        $shops = $query->get();
 
         Log::debug(DB::getQueryLog());
 
         return view('show',[
             'shops'=>$shops
         ]);
+
     }
 
 }

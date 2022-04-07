@@ -9,16 +9,16 @@
     </head>
     <body class="antialiased">
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-        @if(empty($shops))
-            <span>検索結果に該当するお店はありませんでした</span>
 
-       @endif
-
-        @foreach($shops as $shop)
+        @forelse($shops as $shop)
           <div>{{ $shop->shop_name }}</div>
           <div>{{ $shop->shop_pref }}{{$shop->shop_city}}</div>
           <div>{{ $shop->nearest_station }}駅</div>
-        @endforeach
+
+        @empty
+        <span>検索結果に該当するお店はありませんでした</span>
+
+        @endforelse
 
         </div>
     </body>
