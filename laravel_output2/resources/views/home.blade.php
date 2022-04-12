@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
                 <h1>お店を探す</h1>
-                <form action="{{url('/search')}}" method="post">
+                <form method="post" action="{{url('/search')}}">
                 @csrf
                 {{method_field('get')}}
                 <div class="form-group">
@@ -25,36 +25,47 @@
                         <option value="2">以下</option>
                     </select>
                 </div>
-                <div class="form-group">
+                <!--<div class="form-group">
                     <label>目的で検索</label>
                     <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" name="use[]" value="1">宴会
+                        <label>
+                        <input type="checkbox" class="custom-control-input" name="use[]" value="party">宴会
+                        </label>
                     </div>
                     <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input"　name="use[]" value="2">歓送迎会
+                        <label>
+                        <input type="checkbox" class="custom-control-input"　name="use[]" value="small">少人数
+                        </label>
                     </div>
                     <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input"　name="use[]" value="3">少人数
-                    </div>
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input"　name="use[]" value="4">女子会
+                        <label>
+                        <input type="checkbox" class="custom-control-input"　name="use[]" value="girls">女子会
+                        </label>
                     </div>
                 </div>
                 <div class="form-group">
                     <label>食べたいもので検索</label>
                     <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" name="food[]" value="1">海鮮
+                        <label>
+                        <input type="checkbox" class="custom-control-input" name="food[]" value="seafood">海鮮
+                        </label>
                     </div>
                     <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input"　name="food[]" value="2">銘柄牛
+                        <label>
+                        <input type="checkbox" class="custom-control-input"　name="food[]" value="brandcow">銘柄牛
+                        </label>
                     </div>
                     <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input"　name="food[]" value="3">地酒
+                        <label>
+                        <input type="checkbox" class="custom-control-input"　name="food[]" value="localsake">地酒
+                        </label>
                     </div>
                     <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input"　name="food[]" value="4">クラフトビール
+                        <label>
+                        <input type="checkbox" class="custom-control-input"　name="food[]" value="craftbeer">クラフトビール
+                        </label>
                     </div>
-                </div>
+                </div>-->
 
                   <div class="text-center">
                     <button type="submit" class="btn btn-primary col-md-5">検索</button>
